@@ -1,0 +1,725 @@
+\l
+\l
+CREATE TABLE students (
+    first_name VARCHAR(30),
+    last_name VARCHAR(30),
+    github VARCHAR(30)
+    );
+\d
+\d students
+=# INSERT INTO students (first_name, last_name, github)
+     VALUES ('Jane', 'Hacker', 'jhacks');
+INSERT INTO students (first_name, last_name, github)
+ VALUES ('Jane', 'Hacker', 'jhacks');
+\d students
+SELECT * FROM students
+;
+INSERT INTO students (first_name, last_name, github)
+ VALUES ('Sara', 'Developer', 'sdevelops');
+SELECT * FROM students;
+INSERT INTO students (first_name, last_name, github)
+ VALUES ('Jane', 'Hacker', 'jhacks');
+SELECT * FROM students;
+DROP TABLE students;
+\d students
+=#  CREATE TABLE students (
+(#     id SERIAL PRIMARY KEY,
+(#     first_name VARCHAR(30),
+(#     last_name VARCHAR(30),
+(#     github VARCHAR(30));
+\d students;
+CREATE TABLE students (
+ id SERIAL PRIMARY KEY,
+ first_name VARCHAR(30),
+ last_name VARCHAR(30),
+ github VARCHAR(30));
+INSERT INTO students (first_name, last_name, github)
+ VALUES ('Jane', 'Hacker', 'jhacks');
+INSERT INTO students (first_name, last_name, github)
+ VALUES ('Sara', 'Developer', 'sdevelops');
+\d students
+\d students;
+SELECT * FROM students;
+SELECT last_name FROM students;
+SELECT github, first_name FROM students;
+SELECT * FROM students WHERE first_name = 'Sara';
+CREATE TABLE projects (
+ id SERIAL PRIMARY KEY,
+ title VARCHAR(30),
+ description TEXT,
+ max_grade INTEGER
+);
+\d projects
+INSERT INTO projects (title, description, max_grade)
+VALUES ('Markov', 'Tweets generated from Markov chains', 50);
+SELECT * FROM projects
+;
+INSERT INTO projects (title, description, max_grade)
+VALUES ('Blockly', 'Programmatic Logic Puzzle Game', 100);
+SELECT * FROM projects
+;
+INSERT INTO projects (title, description, max_grade)
+VALUES ('Sudoku', 'Number generating logic game', 100);
+INSERT INTO projects (title, description, max_grade)
+VALUES ('Crossword', 'Like Scrabble but backwards', 100);
+INSERT INTO projects (title, description, max_grade)
+VALUES ('Family Feud', 'Trivia guessing game with ancestral rivalries', 100);
+SELECT * FROM projects
+;
+SELECT * FROM students
+;
+\d projects
+SELECT * FROM projects;
+SELECT * FROM grades
+;
+SELECT * FROM grades
+;
+SELECT * FROM students;
+SELECT * FROM projects
+;
+SELECT * FROM projects;
+SELECT * FROM grades;
+SELECT project_title, grade
+        FROM grades
+        WHERE student_github = *
+;
+SELECT * from grades;
+SELECT * from projects;
+SELECT * FROM students
+;
+SELECT * from projects;
+SELECT github FROM students;
+SELECT title from projects;
+\dt
+\d
+\d users
+\q
+\d
+INSERT INTO users(email, password, age, zipcode)
+VALUES ('jessica@gmail.com', 'mypass', 29, '94114');
+SELECT * FROM users;
+SELECT * FROM users;
+SELECT * FROM users;
+SELECT * FROM users;
+SELECT * FROM users WHERE user_id = 2;
+SELECT * FROM users WHERE email='juanita@gmail.com';
+\q
+\d
+\q
+\dt animals
+\d animals
+\d
+\d animals
+select * from animals
+;
+\d
+\dt
+\d users
+\d
+\d
+\dt users
+\d users
+\d classes
+\d user_classes
+\d
+\d users
+\dt users
+SELECT * FROM users;
+SELECT * FROM classes
+;
+SELECT * FROM user_classes;
+CREATE TABLE students (
+first_name varchar(30) ,
+last_name varchar(30) , 
+github varchar(30)
+);
+\d students
+INSERT INTO students(first_name, last_name, github)
+VALUES ('Jane', 'Hacker', 'jhacks');
+\d students
+SELECT * FROM students
+;
+INSERT INTO students(first_name, last_name, github)
+VALUES ('Linda', 'Phan', 'LindaP');
+INSERT INTO students(first_name, last_name, github)
+VALUES ('Amarja', 'Palekar', 'AmarjaP');
+SELECT * FROM students
+;
+INSERT INTO students(first_name, last_name, github)
+VALUES ('Jane', 'Hacker', 'jhacks');
+SELECT * FROM students
+;
+SELECT * FROM students WHERE first_name = 'Jane';
+DROP TABLE students; 
+CREATE TABLE students ( id SERIAL PRIMARY KEY, 
+first_name varchar(30) ,
+last_name varchar(30) , 
+github varchar(30)
+);
+\d students
+INSERT INTO students(first_name, last_name, github)
+VALUES ('Jane', 'Hacker', 'jhacks');
+INSERT INTO students(first_name, last_name, github)
+VALUES ('Sarah', 'Developer', 'sdevelops');
+SELECT * FROM students
+;
+SELECT github  FROM students;
+SELECT first_name, github  FROM students;
+SELECT  github, id  FROM students;
+SELECT * FROM students WHERE first_name = 'Sarah';
+SELECT * FROM students WHERE id = 2;
+SELECT first_name, last_name 
+FROM students 
+WHERE id = 2; 
+CREATE TABLE projects(
+id SERIAL PRIMARY KEY,
+title VARCHAR(15),
+description VARCHAR(50),
+)
+;
+CREATE TABLE projects(
+id SERIAL PRIMARY KEY,
+title VARCHAR(30),
+description TEXT;
+CREATE TABLE projects(
+id SERIAL PRIMARY KEY,
+title VARCHAR(30),
+description TEXT, max_grade INTEGER
+)
+;
+\d projects
+\dt
+CREATE TABLE projects (
+(#     id SERIAL PRIMARY KEY,
+(#     title VARCHAR(30),
+(#     description TEXT,
+(#     max_grade INTEGER
+;
+;
+);
+CREATE TABLE projects ( id SERIAL PRIMARY KEY, title VARCHAR(30), description TEXT, max_grade INTEGER);
+\dt
+CREATE TABLE projects (
+(#     id SERIAL PRIMARY KEY,
+(#     title VARCHAR(30),
+(#     description TEXT,
+(#     max_grade INTEGER
+;
+;
+);
+CREATE TABLE projects ( id SERIAL PRIMARY KEY, title VARCHAR(30), description TEXT, max_grade INTEGER);
+\d projects
+\d
+\dt 
+CREATE TABLE projects ( id SERIAL PRIMARY KEY, title VARCHAR(30), description TEXT, max_grade INTEGER);
+\dt 
+INSERT INTO projects (title, description, max_grade)
+VALUES ('Markov', 'Tweets generated from Markov Chains', 50);
+\d projects
+SELECT * FROM projects
+;
+INSERT INTO projects (title, description, max_grade)
+VALUES ('Blocky', 'Programmatic Logic Puzzle Game', 100);
+SELECT * FROM projects
+;
+SELECT * FROM students;
+INSERT INTO students (first_name, last_name, github) VALUES('Linda', 'Phan', 'lindap');
+INSERT INTO students (first_name, last_name, github) VALUES('Amarja', 'Palekar', 'Amarjap');
+INSERT INTO projects (title, description, max_grade)
+VALUES ('Colorful.me', 'Color Analysis', 250);
+\d
+\dt
+\dt
+select * from projects 
+;
+select title, max_grade 
+from projects 
+where max_grade >50
+;
+select title, max_grade 
+from projects 
+where max_grade >50 AND max_grade < 200
+;
+select title, max_grade 
+from projects 
+where max_grade < 60 OR max_grade > 200
+;
+SELECT * FROM projects ORDER BY max_grade;
+SELECT * FROM projects ORDER BY max_grade desc;
+CREATE TABLE grades (
+id SERIAL PRIMARY KEY,
+student_github VARCHAR(30),
+project_title VARCHAR(30),
+grade INTEGER);
+INSERT INTO grades (student_github, project_title, grade)
+VALUES ('jhacks', 'Markov', 10)
+;
+INSERT INTO grades (student_github, project_title, grade)
+VALUES ('jhacks', 'Blockly', 2)
+;
+INSERT INTO grades (student_github, project_title, grade)
+VALUES ('sdevelops', 'Colorful.me', 50)
+;
+INSERT INTO grades (student_github, project_title, grade)
+VALUES ('sdevelops', 'Blockly', 100)
+;
+INSERT INTO grades (student_github, project_title, grade)
+VALUES ('jhacks', 'Colorful.me', 150)
+;
+INSERT INTO grades (student_github, project_title, grade)
+VALUES ('sdevelops', 'Markov', 35)
+;
+select * from grades
+;
+SELECT first_name, last_name FROM students WHERE github = 'jhacks';
+SELECT project_title, grade FROM grades WHERE student_github = 'jhacks';
+SELECT title, max_grade FROM projects;
+SELECT * FROM students JOIN grades ON (students.github = grades.student_github);
+SELECT students.first_name, 
+students.last_name, 
+grades.projects_title, 
+grades.grade
+FROM students 
+JOIN grades ON (students.github = grades.student_github)
+;
+SELECT students.first_name, 
+students.last_name, 
+grades.project_title, 
+grades.grade
+FROM students 
+JOIN grades ON (students.github = grades.student_github)
+;
+SELECT * FROM students JOIN grades ON (students.github = grades.student_github)
+JOIN projects ON (grades.project_title = projects.title);
+SELECT * FROM students JOIN grades ON (students.github = grades.student_github)
+JOIN projects ON (grades.project_title = projects.title) WHERE github ='jhacks';
+select len(project_title) from projects
+;
+select len(project_title) from grades
+;
+ 
+SELECT * FROM projects 
+join grades 
+on projects.title = grades.project_title 
+where projects.title = 'Blockly' 
+;
+ 
+SELECT * FROM projects 
+join grades 
+on projects.title = grades.project_title 
+where projects.title like 'B%' 
+;
+ 
+SELECT * FROM projects where projects.title = 'Blockly' 
+;
+ 
+SELECT * FROM projects where projects.title like 'B%' 
+;
+ 
+UPDATE projects set title = 'Blockly' where projects.title like 'B%' 
+;
+ 
+SELECT * FROM projects where projects.title like 'B%' 
+;
+ 
+SELECT * FROM projects 
+join grades 
+on projects.title = grades.project_title 
+where projects.title like 'B%' 
+;
+SELECT * FROM students JOIN grades ON (students.github = grades.student_github)
+JOIN projects ON (grades.project_title = projects.title) WHERE github ='jhacks';
+SELECT * FROM students JOIN grades ON (students.github = grades.student_github)
+JOIN projects ON (grades.project_title = projects.title) WHERE github ='jhacks';
+SELECT students.first_name, students.last_name, grades.project_title, grades.grade, projects.max_grade FROM students JOIN grades ON (students.github = grades.student_github)
+JOIN projects ON (grades.project_title = projects.title) WHERE github ='jhacks';
+ create view report_card_view as SELECT students.first_name, students.last_name, grades.project_title, projects.max_grade,grades.grade FROM students JOIN grades ON (students.github = grades.student_github)
+JOIN projects ON (grades.project_title = projects.title);
+select * from report_card_view
+;
+ALTER TABLE STUDENTS DROP CONSTRAINT students_pkey; 
+ALTER TABLE students ADD PRIMARY KEY (github); 
+\d students
+/dt
+\dt
+\q
+SELECT * FROM students
+;
+\dt
+SELECT * FROM students
+;
+\dt
+SELECT * FROM students
+;
+SELECT * FROM students
+;
+SELECT * FROM students
+;
+\d
+\d users
+\d
+\d movies
+\d ratings
+\d movies
+\d movies
+\d ratings
+\d 
+\d ratings
+\d movies
+INSERT INTO users (email, password, age, zipcode)
+VALUES('jessica@gmail.com', 'mypass', 29, '94114');
+SELECT * FROM users;
+SELECT * FROM users;
+SELECT * FROM users;
+SELECT * FROM users;
+SELECT * FROM users;
+SELECT * FROM users WHERE user_id = 2;
+SELECT * FROM users WHERE email='juanita@gmail.com';
+SELECT * FROM users;
+SELECT * FROM users;
+\d
+\d users
+SELECT * FROM users;
+SELECT * FROM movies
+;
+SELECT * FROM Movies
+;
+SELECT * FROM Movies;
+SELEC * FROM movies
+;
+SELECT * FROM movies;
+\d
+\d
+\d movies
+SELECT * FROM movies;
+SELECT * FROM Movie
+;
+SELECT * FROM Movie;
+SELECT * FROM movies;
+SELECT * FROM movie;
+SELEC * FROM users
+;
+SELECT * FROM users;
+\d
+SELECT * FROM movies;
+SELECT * FROM movies;
+SELECT * FROM ratings;
+SELECT * FROM users WHERE user_id = 5
+;
+SELECT * FROM movies WHERE title = "Cape Fear";
+SELECT * FROM movies
+;
+SELECT * FROM movies WHERE title = "Copycat";
+SELECT title FROM movies
+;
+SELECT * FROM movies WHERE title = 'Copycat';
+SELECT * FROM movies WHERE title = "Copycat";
+SELECT * FROM movies WHERE title = 'Copycat';
+\d
+\d movies
+SELECT * FROM movies;
+SELECT * FROM movies;
+SELECT * FROM movies WHERE title = "Antonia's Line";
+SELECT title FROM movies WHERE movie_id = '12';
+SELECT * FROM movies WHERE title = ' Usual Suspects, The ';
+\d movies
+SELECT * FROM movies;
+SELECT title FROM movies WHERE movie_id = 12;
+SELECT * FROM movies;
+SELECT * FROM movies;
+\d
+SELECT * FROM users;
+\d
+SELECT * FROM users
+;
+\d
+\d users
+SELECT * FROM users;
+SELECT * FROM users;
+SELECT * FROM users WHERE email='booger@butt.com';
+SELECT * FROM users WHERE email='jess@jenkins.com';
+\d
+SELECT * FROM users;
+SELECT * FROM users;
+SELECT * FROM users;
+SELECT * FROM movies;
+SELECT * FROM ratings;
+SELECT * FROM movies;
+SELECT * movies_movie_id_seq
+;
+SELECT * movies_movie_id_seq;
+SELECT * FROM ratings;
+SELECT * FROM ratings;
+SELECT * from ratings r, users u, movies m where r.user_id = u.user_id
+SELECT * from users u, movies m, ratings r where u.user_id = r.user_I
+SELECT * from user u, ratings r, movies m where u.user_id = r.user_id and m.movie_id = r.movie_id;
+SELECT * from ratings r, users u, movies m where r.user_id = u.user_id
+SELECT * from users u, movies m, ratings r where u.user_id = r.user_I
+SELECT * from user u, ratings r, movies m where u.user_id = r.user_id andid = r.movie_id;
+SELECT * from users u, movies m, ratings r where u.user_id = r.user_idand r.movie_id = m.movie_id;
+SELECT * from users u, movies m, ratings r where u.user_id = r.user_id and r.movie_id = m.movie_id;
+SELECT * from ratings r, users u, movies m where r.user_id = u.user_id
+SELECT * from users u, movies m, ratings r where u.user_id = r.user_I
+SELECT * from user u, ratings r, movies m where u.user_id = r.user_id andid = r.movie_id;
+\d
+SELECT * FROM games;
+SELECT * FROM games;
+\d
+SELECT * FROM games;
+\d
+SELECT * FROM games;
+SELECT * FROM games;
+\d
+\d
+SELECT * FROM games;
+SELECT * FROM games_game_id_seq 
+;
+SELECT * FROM games;
+SELECT * FROM games;
+\d
+\d
+\d
+\d
+SELECT * FROM games;
+\d
+\d
+\dt
+\dt
+SELECT * FROM students;
+CREATE TABLE students (
+ first_name VARCHAR(30),
+ last_name VARCHAR(30),
+ github VARCHAR(30)
+);
+\d students
+INSERT INTO students (first_name, last_name, github)
+VALUES('Jane', 'Hacker', 'jhacks');
+\d students
+SELECT * FROM students;
+INSERT INTO students (first_name, last_name, github)
+VALUES('Sarah', 'Developer', 'sdevelops');
+SELECT * FROM students
+SELECT * FROM students;
+SELECT * FROM students;
+INSERT INTO students (first_name, last_name, github)
+VALUES('Jane', 'Hacker', 'jhacks');
+SELECT * FROM students;
+DROP TABLE students;
+CREATE TABLE students (
+id SERIAL PRIMARY KEY,
+first_name VARCHAR(30),
+last_name VARCHAR(30),
+github VARCHAR(30));
+INSERT INTO students (first_name, last_name, github)
+VALUES ('Jane', 'Hacker', 'jhacks');
+INSERT INTO students (first_name, last_name, github)
+VALUES ('Sarah', 'Developer', 'sdevelops');
+SELECT * FROM students;
+SELECT * FROM students;
+SELECT last_name FROM students;
+SELECT github, first_name FROM students;
+SELECT * FROM students WHERE first_name = 'Sarah';
+SELECT * FROM students WHERE github = 'sdevelops';
+=#  SELECT first_name, last_name
+-#  FROM students
+ WHERE github = 'jhacks';
+SELECT first_name, last_name
+FROM students
+WHERE github = 'jhacks';
+CREATE TABLE projects (
+id SERIAL PRIMARY KEY,
+title VARCHAR(30),
+description TEXT,
+max_grade INTEGER
+);
+SELECT * FROM projects;
+INSERT INTO projects (title, description, max_grade)
+VALUES ('Markov', 'Tweets generated from Markov chains', 50);
+INSERT INTO projects (title, description, max_grade)
+VALUES ('Blockly', 'Programmatic Logic Puzzle Game', 100);
+INSERT INTO projects (title, description, max_grade)
+VALUES ('Salary', 'Updating salary for each employee', 10000);
+INSERT INTO projects (title, description, max_grade)
+VALUES ('Apartment', 'Finding apartment for new employee', 10);
+INSERT INTO projects (title, description, max_grade)
+VALUES ('Plugin', 'Plugin that generates whale sounds', 20);
+SELECT * FROM projects;
+SELECT title, max_grade
+FROM projects
+WHERE max_grade > 50;
+SELECT title, max_grade
+FROM projects
+WHERE max_grade > 10
+AND max_grade < 60;
+SELECT title, max_grade
+FROM projects
+WHERE max_grade < 25
+OR max_grade > 75;
+SELECT *
+FROM projects
+ORDER BY max_grade;
+CREATE TABLE grades (
+id SERIAL PRIMARY KEY,
+student_github VARCHAR(30),
+project_title VARCHAR(30),
+grade INTEGER);
+INSERT INTO grades (student_github, project_title, grade)
+VALUES (
+'jhacks', 'Markov', 10);
+INSERT INTO grades (student_github, project_title, grade)
+VALUES (
+'jhacks', 'Blockly', 2);
+INSERT INTO grades (student_github, project_title, grade)
+VALUES (
+'sdevelops', 'Markov', 50);
+INSERT INTO grades (student_github, project_title, grade)
+VALUES (
+'sdevelops', 'Blockly', 100);
+INSERT INTO grades (student_github, project_title, grade)
+VALUES (
+'hacker_1', 'Salary', 100);
+INSERT INTO grades (student_github, project_title, grade)
+VALUES (
+'spider', 'Aparment', 60);
+SELECT * FROM projects;
+SELECT * FROM grades;
+SELECT first_name, last_name
+FROM students
+WHERE github = 'jhacks';
+SELECT project_title, grade
+FROM grades
+WHERE student_github = 'jhacks';
+SELECT title, max_grade
+FROM projects;
+SELECT *
+FROM students
+JOIN grades ON (students.github = grades.student_github);
+SELECT students.first_name,
+       students.last_name,
+       grades.project_title,
+       grades.grade
+FROM students
+  JOIN grades ON (students.github = grades.student_github);
+\d
+\d students
+\dt proects
+\dt projects
+\d projects
+\dt
+SELECT * FROM projects
+;
+quit
+\qq
+\q
+\d
+\d users
+\dt
+\d
+\dt
+\d movies
+\dt
+\d movies
+\d
+\dt
+\d ratings
+SELECT * FROM ratings
+;
+\d movies
+\d users
+\d users
+\d movies
+\d movies
+INSERT INTO users (email, password, age, zipcode)
+VALUES ('jessica@gmail.com', 'mypass', 29, '94114');
+\d users
+SELECT * from users
+;
+SELECT * from users
+;
+SELECT * from users;
+SELECT * from users;
+select * from users;
+select * from users;
+select * from users;
+select * from users;
+select * from users;
+select * from users;
+select * from users;
+select * from movies;
+select * from movies;
+select * from movies;
+select * from movies;
+select * from movies;
+select * from movies;
+select * from movies;
+select * from movies
+;
+select * from movies
+;
+;
+select * from ratings;
+select * from ratings;
+select * from ratings;
+\dt
+\d
+select * from ratings;
+select * from ratings;
+select * from ratings;
+select * from ratings;
+select * from ratings;
+select * from movies;
+select * from movies;
+select * from ratings;
+select * from users;
+select * from ratings;
+SELECT * FROM ratings
+WHERE rating_id = 1;
+SELECT * FROM ratings
+WHERE rating_id = 10000;
+select * from ratings;
+SELECT * FROM ratings
+WHERE rating_id = 99999;
+select * from ratings;
+select * from users;
+select * from movies;
+select * from ratings;
+select * from ratings
+;
+\dt
+select * from users
+;
+select * from ratings
+;
+q
+;
+\dt
+\dt
+select * from movies
+;
+select * from ratings;
+select * from ratings;
+select * from ratings;
+select * from ratings;
+select * from users;
+select * from games;
+\dt
+\d
+createdb quiz
+psql quiz < database.sql 
+python3 quiz.py
+q
+\q
+\dt
+\q
+\dt
+\d
+\d quiz
+\q
+\dt
+\q
+CREATE TABLE students (
+  first_name VARCHAR(30),
+  last_name VARCHAR(30),
+  github VARCHAR(30)
+  );
+\s students
